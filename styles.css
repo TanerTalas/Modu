@@ -1,1 +1,56 @@
 @import "tailwindcss";
+
+:root {
+  --amber: #f59e0b;
+  --amber-light: #fcd34d;
+  --amber-dim: #92400e;
+  --night: #080c12;
+  --navy: #0d1421;
+  --navy-2: #111827;
+  --card: #161f2e;
+  --card-2: #1a2537;
+  --cream: #fef3c7;
+  --muted: #94a3b8;
+  --white: #f8fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--night);
+  color: var(--white);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Custom cursor */
+.cursor {
+  width: 14px;
+  height: 14px;
+  background: var(--amber);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition:
+    transform 0.15s ease,
+    background 0.2s;
+  transform: translate(-50%, -50%);
+}
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--amber);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition:
+    transform 0.35s ease,
+    opacity 0.3s;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
