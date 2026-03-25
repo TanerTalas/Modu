@@ -380,6 +380,18 @@ nav {
   border-color: var(--amber);
   background: rgba(245, 158, 11, 0.05);
 }
+.robot-area {
+  margin: 4rem auto 0;
+  animation: fadeUp 0.8s 0.4s ease both;
+  position: relative;
+  display: inline-block;
+}
+.robot-glow {
+  position: absolute;
+  inset: -30px;
+  background: radial-gradient( ellipse at 50% 60%, rgba(245, 158, 11, 0.2) 0%, transparent 70% );
+  pointer-events: none;
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
