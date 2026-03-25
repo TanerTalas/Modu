@@ -698,6 +698,16 @@ footer span {
     transform: translateY(-12px);
   }
 }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--night);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--amber-dim);
+  border-radius: 3px;
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
