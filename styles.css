@@ -75,7 +75,7 @@
   }
 
   .nav-cta {
-    @apply rounded-full bg-[var(--amber)] px-5 py-2 font-extrabold !text-[var(--night)];
+    @apply rounded-full bg-[var(--amber)] px-5 py-2 !text-[var(--night)];
     transition:
       background 0.2s,
       transform 0.2s;
@@ -129,7 +129,7 @@
 
   /* Buttons */
   .btn-primary {
-    @apply inline-block rounded-full border-0 bg-[var(--amber)] px-8 py-3.5 text-base font-extrabold cursor-none no-underline transition-transform duration-200 text-[var(--night)] shadow-[0_0_40px_rgba(245,158,11,0.3)];
+    @apply inline-flex items-center rounded-full border-0 bg-[var(--amber)] px-8 py-3.5 text-base font-extrabold cursor-none no-underline transition-transform duration-200 text-[var(--night)] shadow-[0_0_40px_rgba(245,158,11,0.3)];
   }
   .btn-primary:hover {
     @apply scale-[1.05] shadow-[0_0_60px_rgba(245,158,11,0.5)];
@@ -185,7 +185,7 @@
 
   .feature-card {
     @apply relative overflow-hidden rounded-[20px] border border-[rgba(255,255,255,0.06)] bg-[var(--card)] p-8;
-    @apply transition-[border-color,transform,box-shadow] duration-300;
+    @apply transition-[border-color,translate,box-shadow] duration-300;
   }
 
   .feature-card::before {
@@ -362,6 +362,10 @@
   footer span {
     @apply text-[var(--amber)];
   }
+}
+
+.nav-cta {
+  @apply font-extrabold;
 }
 
 /* Animations */
