@@ -708,6 +708,17 @@ footer span {
   background: var(--amber-dim);
   border-radius: 3px;
 }
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+  }
+  .stats-row {
+    gap: 2rem;
+  }
+  .audience-tabs {
+    overflow-x: auto;
+  }
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;

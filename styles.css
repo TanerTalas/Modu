@@ -630,3 +630,16 @@ footer span {
   background: var(--amber-dim);
   border-radius: 3px;
 }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+  }
+  .stats-row {
+    gap: 2rem;
+  }
+  .audience-tabs {
+    overflow-x: auto;
+  }
+}
