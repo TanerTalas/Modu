@@ -44,16 +44,21 @@ function setMode(el) {
 }
 
 // Audience tabs
-function switchTab(tab, btn) {
-  document
-    .querySelectorAll(".tab-btn")
-    .forEach((b) => b.classList.remove("active"));
-  document
-    .querySelectorAll(".tab-content")
-    .forEach((c) => c.classList.remove("active"));
-  btn.classList.add("active");
-  document.getElementById("tab-" + tab).classList.add("active");
-}
+const buttons = document.querySelectorAll(".tab-btn");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const tab = btn.dataset.tab;
+    document
+      .querySelectorAll(".tab-btn")
+      .forEach((b) => b.classList.remove("active"));
+    document
+      .querySelectorAll(".tab-content")
+      .forEach((c) => c.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("tab-" + tab).classList.add("active");
+  });
+});
 
 // Email submit
 function handleSubmit() {

@@ -7,8 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -165,18 +163,9 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .ring {
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
 }
 :root {
@@ -418,6 +407,9 @@ nav {
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
 }
+.section-title > span {
+  color: var(--amber);
+}
 .section-sub {
   font-size: 1rem;
   color: var(--muted);
@@ -484,6 +476,7 @@ nav {
 .audience-tabs {
   display: flex;
   gap: 0.5rem;
+  margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   background: var(--card);
   border-radius: 999px;
@@ -507,6 +500,8 @@ nav {
 }
 .tab-content {
   display: none;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 .tab-content.active {
   display: grid;
@@ -548,6 +543,10 @@ nav {
 .stat {
   flex: 1;
   min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .stat-num {
   font-size: 2.5rem;
@@ -562,6 +561,38 @@ nav {
   font-weight: 600;
   margin-top: 0.25rem;
 }
+#vision {
+  text-align: center;
+  max-width: 700px;
+}
+#vision p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.vision-card {
+  margin-top: 3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--card);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  border-radius: 16px;
+  padding: 1.25rem 2rem;
+}
+.vision-card--heart {
+  font-size: 2rem;
+}
+.vision-card--text {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-align: left;
+  max-width: 300px;
+  line-height: 1.6;
+}
 .cta-section {
   margin: 2rem;
   border-radius: 28px;
@@ -571,6 +602,17 @@ nav {
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+.section-label--cta {
+  margin-bottom: 1.5rem;
+}
+.cta-submit-message {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--amber);
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 .cta-section::before {
   content: "";
@@ -706,11 +748,6 @@ footer span {
   syntax: "*";
   inherits: false;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-shadow {
   syntax: "*";
   inherits: false;
@@ -784,7 +821,6 @@ footer span {
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
