@@ -34,3 +34,12 @@ document
       ring.style.opacity = "0.5";
     });
   });
+
+// Mode pills
+function setMode(el) {
+  document
+    .querySelectorAll(".mode-pill")
+    .forEach((p) => p.classList.remove("active"));
+  el.classList.add("active");
+}
+

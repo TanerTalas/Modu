@@ -392,6 +392,59 @@ nav {
   background: radial-gradient( ellipse at 50% 60%, rgba(245, 158, 11, 0.2) 0%, transparent 70% );
   pointer-events: none;
 }
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+.mode-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--card);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: "DM Mono", monospace;
+  color: var(--amber-light);
+  margin: 0 0.25rem 0.5rem;
+  transition: all 0.2s;
+  cursor: none;
+}
+.mode-pill:hover, .mode-pill.active {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: var(--amber);
+  color: var(--amber);
+}
+.mode-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes underlineIn {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
