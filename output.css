@@ -272,6 +272,114 @@ nav {
   background: var(--amber-light) !important;
   transform: scale(1.04) !important;
 }
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 2rem 4rem;
+}
+.hero-content {
+  max-width: 700px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: var(--amber-light);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: "DM Mono", monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.6s ease both;
+}
+.hero-title {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 0.7s 0.1s ease both;
+}
+.hero-title span {
+  color: var(--amber);
+  position: relative;
+  display: inline-block;
+}
+.hero-title span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--amber);
+  border-radius: 2px;
+  transform: scaleX(0);
+  animation: underlineIn 0.6s 0.8s ease forwards;
+}
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto 2.5rem;
+  font-weight: 600;
+  animation: fadeUp 0.7s 0.2s ease both;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeUp 0.7s 0.3s ease both;
+}
+.btn-primary {
+  background: var(--amber);
+  color: var(--night);
+  padding: 0.875rem 2rem;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 1rem;
+  border: none;
+  cursor: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 40px rgba(245, 158, 11, 0.3);
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(245, 158, 11, 0.5);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  padding: 0.875rem 2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: none;
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-secondary:hover {
+  border-color: var(--amber);
+  background: rgba(245, 158, 11, 0.05);
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
