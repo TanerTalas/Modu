@@ -54,3 +54,36 @@ function switchTab(tab, btn) {
   btn.classList.add("active");
   document.getElementById("tab-" + tab).classList.add("active");
 }
+
+// Email submit
+function handleSubmit() {
+  const val = document.getElementById("emailInput").value;
+  const msg = document.getElementById("submitMsg");
+  if (!val || !val.includes("@")) {
+    msg.textContent = "Lütfen geçerli bir e-posta gir.";
+    msg.style.color = "#f87171";
+  } else {
+    msg.textContent = "✦ Harika! Listeye eklendin. Seni haberdar edeceğiz.";
+    msg.style.color = "var(--amber)";
+    document.getElementById("emailInput").value = "";
+  }
+  msg.style.opacity = "1";
+  setTimeout(() => (msg.style.opacity = "0"), 3500);
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add("show");
+      }
+    });
+  },
+  { threshold: 0.12 },
+);
+
+document.querySelectorAll(".reveal-container, .use-card").forEach((el) => {
+  el.classList.add("reveal");
+  observer.observe(el);
+});

@@ -247,59 +247,6 @@ nav {
   background: rgba(245, 158, 11, 0.05);
 }
 
-/* Modu Robot SVG area */
-.robot-area {
-  margin: 4rem auto 0;
-  animation: fadeUp 0.8s 0.4s ease both;
-  position: relative;
-  display: inline-block;
-}
-
-.robot-glow {
-  position: absolute;
-  inset: -30px;
-  background: radial-gradient(
-    ellipse at 50% 60%,
-    rgba(245, 158, 11, 0.2) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-}
-
-.floating {
-  animation: float 4s ease-in-out infinite;
-}
-
-/* Mode switcher */
-.mode-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: var(--card);
-  border: 1px solid rgba(245, 158, 11, 0.15);
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  font-family: "DM Mono", monospace;
-  color: var(--amber-light);
-  margin: 0 0.25rem 0.5rem;
-  transition: all 0.2s;
-  cursor: none;
-}
-.mode-pill:hover,
-.mode-pill.active {
-  background: rgba(245, 158, 11, 0.15);
-  border-color: var(--amber);
-  color: var(--amber);
-}
-.mode-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--amber);
-}
-
 /* Divider */
 .divider {
   height: 1px;
@@ -575,6 +522,18 @@ nav {
 }
 .email-input::placeholder {
   color: var(--muted);
+}
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* Footer */
