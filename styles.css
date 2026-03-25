@@ -285,6 +285,10 @@ nav {
   margin-bottom: 1.5rem;
 }
 
+.section-title > span {
+  color: var(--amber);
+}
+
 .section-sub {
   font-size: 1rem;
   color: var(--muted);
@@ -365,6 +369,7 @@ nav {
 .audience-tabs {
   display: flex;
   gap: 0.5rem;
+  margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   background: var(--card);
   border-radius: 999px;
@@ -391,6 +396,8 @@ nav {
 
 .tab-content {
   display: none;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 .tab-content.active {
   display: grid;
@@ -438,6 +445,10 @@ nav {
 .stat {
   flex: 1;
   min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .stat-num {
   font-size: 2.5rem;
@@ -453,6 +464,44 @@ nav {
   margin-top: 0.25rem;
 }
 
+/* Vision section */
+#vision {
+  text-align: center;
+  max-width: 700px;
+}
+
+#vision p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.vision-card {
+  margin-top: 3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--card);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  border-radius: 16px;
+  padding: 1.25rem 2rem;
+}
+
+.vision-card--heart {
+  font-size: 2rem;
+}
+
+.vision-card--text {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-align: left;
+  max-width: 300px;
+  line-height: 1.6;
+}
+
 /* CTA section */
 .cta-section {
   margin: 2rem;
@@ -463,6 +512,19 @@ nav {
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.section-label--cta {
+  margin-bottom: 1.5rem;
+}
+
+.cta-submit-message {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--amber);
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .cta-section::before {
@@ -524,7 +586,6 @@ nav {
   color: var(--muted);
 }
 
-
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -533,7 +594,9 @@ nav {
 .reveal.show {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 /* Footer */
