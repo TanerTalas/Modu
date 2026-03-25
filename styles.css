@@ -410,6 +410,9 @@
 
 /* Responsive */
 @media (max-width: 640px) {
+  body, .tab-btn {
+    @apply cursor-default;
+  }
   .nav-links {
     @apply hidden;
   }
@@ -418,5 +421,12 @@
   }
   .audience-tabs {
     @apply overflow-x-auto;
+  }
+  .cursor, .cursor-ring {
+    @apply hidden;
+  }
+
+  a, .tab-btn:not(.active), button {
+    @apply cursor-pointer;
   }
 }

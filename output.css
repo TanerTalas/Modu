@@ -872,6 +872,9 @@
   border-radius: 3px;
 }
 @media (max-width: 640px) {
+  body, .tab-btn {
+    cursor: default;
+  }
   .nav-links {
     display: none;
   }
@@ -880,6 +883,12 @@
   }
   .audience-tabs {
     overflow-x: auto;
+  }
+  .cursor, .cursor-ring {
+    display: none;
+  }
+  a, .tab-btn:not(.active), button {
+    cursor: pointer;
   }
 }
 @property --tw-rotate-x {
