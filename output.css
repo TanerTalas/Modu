@@ -223,6 +223,12 @@ body::before {
   z-index: 1000;
   opacity: 0.4;
 }
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
 nav {
   position: fixed;
   top: 0;

@@ -66,6 +66,14 @@ body::before {
   opacity: 0.4;
 }
 
+/* Glow blob */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
 /* Nav */
 nav {
   position: fixed;
