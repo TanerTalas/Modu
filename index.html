@@ -4,8 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modu</title>
+    <!-- Author and Description -->
+    <meta name="author" content="Taner Talas" />
+    <meta
+      name="description"
+      content="Modu, duygusal zekaya sahip yapay zeka robotudur. Çocuklar ve yetişkinler için uyum sağlayan, akıllı ve kişisel bir yoldaş deneyimi sunar.
+"
+    />
+    <!-- Share -->
+    <meta property="og:title" content="Taner Talas | Modu Project" />
+    <meta
+      property="og:description"
+      content="Seni anlayan bir yapay zeka yoldaşı. Modu, her anına uyum sağlayan akıllı ve duygusal bir deneyim sunar."
+    />
+    <meta
+      property="og:image"
+      content="https://tanertalas.github.io/Modu/img/banner.png"
+    />
+    <meta property="og:url" content="https://tanertalas.github.io/Modu/" />
+    <meta property="og:type" content="website" />
+    <!-- Robots and mobil-web -->
+    <meta name="robots" content="index, follow" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://tanertalas.github.io/Modu/" />
     <!-- Icon -->
     <link rel="icon" href="./img/logo.svg" />
+    <!-- Files -->
     <link href="./output.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Mono:wght@400;500&display=swap"
@@ -188,18 +214,11 @@
       <h2 class="section-title">Her yaşa,<br />her ana uygun.</h2>
 
       <div class="audience-tabs">
-        <button class="tab-btn active" data-tab="kids">
-          👧 Çocuklar
-        </button>
-        <button class="tab-btn" data-tab="adults">
-          💼 Yetişkinler
-        </button>
+        <button class="tab-btn active" data-tab="kids">👧 Çocuklar</button>
+        <button class="tab-btn" data-tab="adults">💼 Yetişkinler</button>
       </div>
 
-      <div
-        id="tab-kids"
-        class="tab-content active"
-      >
+      <div id="tab-kids" class="tab-content active">
         <div class="use-card">
           <div class="use-num">01</div>
           <div class="use-text">
@@ -234,10 +253,7 @@
         </div>
       </div>
 
-      <div
-        id="tab-adults"
-        class="tab-content"
-      >
+      <div id="tab-adults" class="tab-content">
         <div class="use-card">
           <div class="use-num">01</div>
           <div class="use-text">
@@ -298,10 +314,7 @@
     <div class="divider"></div>
 
     <!-- Vision -->
-    <section
-      class="section"
-      id="vision"
-    >
+    <section class="section" id="vision">
       <div class="section-label">✦ Vizyon</div>
       <h2 class="section-title">
         Sadece bir cihaz değil.<br />Bir
@@ -314,9 +327,7 @@
       </p>
       <div class="vision-card">
         <span class="vision-card--heart">💛</span>
-        <span
-          class="vision-card--text"
-        >
+        <span class="vision-card--text">
           "Modu'nun sınırları kullanıcıya bağlıdır."
         </span>
       </div>
@@ -324,9 +335,7 @@
 
     <!-- CTA / Waitlist -->
     <div class="cta-section" id="waitlist">
-      <div class="section-label section-label--cta">
-        ✦ Erken Erişim
-      </div>
+      <div class="section-label section-label--cta">✦ Erken Erişim</div>
       <h2 class="cta-title">Modu ile<br />tanış, ilk sen ol.</h2>
       <p class="cta-sub">
         Listeye katıl, Modu hazır olduğunda seni haberdar edelim.
@@ -338,17 +347,11 @@
           placeholder="e-posta adresin"
           id="emailInput"
         />
-        <button
-          class="btn-primary"
-          onclick="handleSubmit()"
-        >
+        <button class="btn-primary" onclick="handleSubmit()">
           Listeye Katıl
         </button>
       </div>
-      <div
-        id="submitMsg"
-        class="cta-submit-message"
-      ></div>
+      <div id="submitMsg" class="cta-submit-message"></div>
     </div>
 
     <!-- Footer -->
