@@ -367,47 +367,191 @@
 
     <div class="divider"></div>
 
-      <!-- Features -->
-  <section class="section" id="features">
-    <div class="section-label">✦ Özellikler</div>
-    <h2 class="section-title">Bir cihazdan<br>çok daha fazlası.</h2>
-    <p class="section-sub">Modu, teknolojiyi insani bir deneyime dönüştürür. Dinler, anlar ve gerçekten yardım eder.</p>
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="section-label">✦ Özellikler</div>
+      <h2 class="section-title">Bir cihazdan<br />çok daha fazlası.</h2>
+      <p class="section-sub">
+        Modu, teknolojiyi insani bir deneyime dönüştürür. Dinler, anlar ve
+        gerçekten yardım eder.
+      </p>
 
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🎭</div>
-        <div class="feature-title">Mod Sistemi</div>
-        <div class="feature-desc">Kullanıcıya özel profiller. Çocuk modu, çalışma modu, oyun modu, sessiz mod ve daha fazlası. Bir dokunuşla değişir.</div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎭</div>
+          <div class="feature-title">Mod Sistemi</div>
+          <div class="feature-desc">
+            Kullanıcıya özel profiller. Çocuk modu, çalışma modu, oyun modu,
+            sessiz mod ve daha fazlası. Bir dokunuşla değişir.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💛</div>
+          <div class="feature-title">Duygu Analizi</div>
+          <div class="feature-desc">
+            Ses tonu, kelimeler ve yüz ifadesinden duygusal durumu analiz eder.
+            Seni anlar, sana göre davranır.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏠</div>
+          <div class="feature-title">Akıllı Ev Entegrasyonu</div>
+          <div class="feature-desc">
+            Işıklar, perdeler, klima, TV — hepsini kontrol eder. Akıllı
+            cihazlarınla senkronize çalışır.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📚</div>
+          <div class="feature-title">Eğitim & Gelişim</div>
+          <div class="feature-desc">
+            Çocuklara soru sorar, bilgileri eğlenceli şekilde aktarır. Masal
+            anlatır, ninni söyler, eğitici içerikler açar.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📡</div>
+          <div class="feature-title">Veri Köprüsü</div>
+          <div class="feature-desc">
+            Yazı, ses, fotoğraf, video — TV'ye, bilgisayara, telefona içerik
+            gönderir. Cihazlar arası köprü kurar.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✦</div>
+          <div class="feature-title">Taşınabilir Tasarım</div>
+          <div class="feature-desc">
+            Hafif ve dayanıklı. Elde taşınabilir. Yüz ifadesi gösteren ekran,
+            renkli ışık tepkileri ve sesli iletişim.
+          </div>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">💛</div>
-        <div class="feature-title">Duygu Analizi</div>
-        <div class="feature-desc">Ses tonu, kelimeler ve yüz ifadesinden duygusal durumu analiz eder. Seni anlar, sana göre davranır.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🏠</div>
-        <div class="feature-title">Akıllı Ev Entegrasyonu</div>
-        <div class="feature-desc">Işıklar, perdeler, klima, TV — hepsini kontrol eder. Akıllı cihazlarınla senkronize çalışır.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📚</div>
-        <div class="feature-title">Eğitim & Gelişim</div>
-        <div class="feature-desc">Çocuklara soru sorar, bilgileri eğlenceli şekilde aktarır. Masal anlatır, ninni söyler, eğitici içerikler açar.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📡</div>
-        <div class="feature-title">Veri Köprüsü</div>
-        <div class="feature-desc">Yazı, ses, fotoğraf, video — TV'ye, bilgisayara, telefona içerik gönderir. Cihazlar arası köprü kurar.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">✦</div>
-        <div class="feature-title">Taşınabilir Tasarım</div>
-        <div class="feature-desc">Hafif ve dayanıklı. Elde taşınabilir. Yüz ifadesi gösteren ekran, renkli ışık tepkileri ve sesli iletişim.</div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="divider"></div>
+    <div class="divider"></div>
+
+    <!-- Audience -->
+    <section class="section" id="audience">
+      <div class="section-label">✦ Kullanım Alanları</div>
+      <h2 class="section-title">Her yaşa,<br />her ana uygun.</h2>
+
+      <div class="audience-tabs" style="margin-top: 2.5rem">
+        <button class="tab-btn active" onclick="switchTab('kids', this)">
+          👧 Çocuklar
+        </button>
+        <button class="tab-btn" onclick="switchTab('adults', this)">
+          💼 Yetişkinler
+        </button>
+      </div>
+
+      <div
+        id="tab-kids"
+        class="tab-content active"
+        style="
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1rem;
+        "
+      >
+        <div class="use-card">
+          <div class="use-num">01</div>
+          <div class="use-text">
+            Oyun oynarken arkadaşlık eder, eğlenceli sohbet kurar.
+          </div>
+        </div>
+        <div class="use-card">
+          <div class="use-num">02</div>
+          <div class="use-text">
+            Eğitim desteği sunar — soru sorar, bilgileri eğlenceli biçimde
+            aktarır.
+          </div>
+        </div>
+        <div class="use-card">
+          <div class="use-num">03</div>
+          <div class="use-text">
+            Uyku zamanı ninni okur, masal anlatır, yatıştırır.
+          </div>
+        </div>
+        <div class="use-card">
+          <div class="use-num">04</div>
+          <div class="use-text">
+            TV ile bağlantıya geçerek eğitici videolar açar.
+          </div>
+        </div>
+        <div class="use-card">
+          <div class="use-num">05</div>
+          <div class="use-text">
+            Çocuğun duygusal durumunu analiz ederek destekleyici içerikler
+            sunar.
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="tab-adults"
+        class="tab-content"
+        style="
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1rem;
+        "
+      >
+        <div class="use-card">
+          <div class="use-num">01</div>
+          <div class="use-text">
+            Günlük görev hatırlatıcıları — ajanda gibi çalışır, randevularını
+            yönetir.
+          </div>
+        </div>
+        <div class="use-card">
+          <div class="use-num">02</div>
+          <div class="use-text">
+            İş fikirleri ve yaratıcı çözümler üretir — mimar, yazılımcı, ofis
+            çalışanı için.
+          </div>
+        </div>
+        <div class="use-card">
+          <div class="use-num">03</div>
+          <div class="use-text">
+            Akıllı ev sistemlerini kontrol eder — ışık, perde, klima ve daha
+            fazlası.
+          </div>
+        </div>
+        <div class="use-card">
+          <div class="use-num">04</div>
+          <div class="use-text">
+            TV veya bilgisayara içerik gönderir — rapor, sunum, görsel, yazı
+            önerisi.
+          </div>
+        </div>
+        <div class="use-card">
+          <div class="use-num">05</div>
+          <div class="use-text">
+            Ses tonundan duygu analizi yaparak moral verici konuşmalar yapar.
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Kullanım Modu</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">360°</div>
+          <div class="stat-label">Duygu Analizi</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Kişiselleştirme</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Gerçek Yoldaş</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
 
     <script src="./script.js"></script>
   </body>

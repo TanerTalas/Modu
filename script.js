@@ -43,3 +43,14 @@ function setMode(el) {
   el.classList.add("active");
 }
 
+// Audience tabs
+function switchTab(tab, btn) {
+  document
+    .querySelectorAll(".tab-btn")
+    .forEach((b) => b.classList.remove("active"));
+  document
+    .querySelectorAll(".tab-content")
+    .forEach((c) => c.classList.remove("active"));
+  btn.classList.add("active");
+  document.getElementById("tab-" + tab).classList.add("active");
+}
