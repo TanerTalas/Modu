@@ -21,7 +21,7 @@ It was built to demonstrate my ability to create product-oriented landing pages 
 - Clean and scalable CSS structure using Tailwind (@apply & component pattern)
 - Performance-aware design (optimized for CLS, LCP, INP)
 
-🔗 **Live Demo**: [tanertalas.github.io/Modu/](tanertalas.github.io/Modu/)
+🔗 **Live Demo**: [tanertalas.github.io/Modu/](https://tanertalas.github.io/Modu/)
 
 ---
 
@@ -45,7 +45,7 @@ Bu proje, modern ve etkileşimli bir kullanıcı arayüzü oluşturma, kullanıc
 - Tailwind CSS (@apply ve component yaklaşımı) ile temiz ve ölçeklenebilir yapı
 - Performans odaklı tasarım (CLS, LCP, INP metrikleri gözetilerek)
 
-🔗 **Canlı Site**: [tanertalas.github.io/Modu/](tanertalas.github.io/Modu/)
+🔗 **Canlı Site**: [tanertalas.github.io/Modu/](https://tanertalas.github.io/Modu/)
 
 ## License / Lisans
 
